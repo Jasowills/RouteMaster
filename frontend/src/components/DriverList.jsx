@@ -7,7 +7,7 @@ const DriversList = () => {
   useEffect(() => {
     const fetchDrivers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/routes'); // Update with your actual API endpoint
+        const response = await fetch('https://routemaster-bj3j.onrender.com/routes'); // Update with your actual API endpoint
         const data = await response.json();
         setDrivers(data);
         console.log(data);

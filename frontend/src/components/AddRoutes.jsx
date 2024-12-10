@@ -27,7 +27,7 @@ const AddRoutes = () => {
     })
 
     try {
-      const response = await fetch('http://localhost:5000/routes', {
+      const response = await fetch('https://routemaster-bj3j.onrender.com/routes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

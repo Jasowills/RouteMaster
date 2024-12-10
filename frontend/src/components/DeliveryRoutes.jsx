@@ -12,7 +12,7 @@ const DeliveryRoutes = () => {
   useEffect(() => {
     const fetchRoutes = async () => {
       try {
-        const response = await fetch('http://localhost:5000/routes');
+        const response = await fetch('https://routemaster-bj3j.onrender.com/routes');
         const data = await response.json();
         setRoutes(data);
       } catch (error) {
