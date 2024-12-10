@@ -72,7 +72,7 @@ const DeliveryRoutes = () => {
       {/* Modal */}
       {isModalOpen && selectedRoute && (
   <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
-    <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-xl relative">
+    <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg w-lg max-w-sm md:max-w-xl relative">
       {/* Close Button */}
       <button
         onClick={closeModal}
@@ -95,22 +95,22 @@ const DeliveryRoutes = () => {
       </button>
 
       {/* Modal Content */}
-      <h2 className="text-2xl font-bold text-center mb-6 text-gray-900 dark:text-white">
+      <h2 className="text-lg md:text-2xl font-bold text-center mb-4 md:mb-6 text-gray-900 dark:text-white">
         {selectedRoute.routeName}
       </h2>
-      
+
       <div className="space-y-4">
         {/* Driver Info */}
-        <div className="flex w-1/3 justify-between items-center space-x-1">
-          <span className="text-gray-600 dark:text-gray-400 font-medium w-1/3">
+        <div className="flex flex-wrap items-center space-x-1 md:space-x-3">
+          <span className="text-gray-600 dark:text-gray-400 font-medium w-1/3 md:w-auto">
             Driver:
           </span>
           <span className="text-gray-800 dark:text-gray-200">{selectedRoute.driver}</span>
         </div>
 
         {/* Status */}
-        <div className="flex w-1/3 justify-between items-center">
-          <span className="text-gray-600 dark:text-gray-400 font-medium w-1/3">
+        <div className="flex flex-wrap items-center space-x-1 md:space-x-3">
+          <span className="text-gray-600 dark:text-gray-400 font-medium w-1/3 md:w-auto">
             Status:
           </span>
           <span
@@ -127,30 +127,32 @@ const DeliveryRoutes = () => {
         </div>
 
         {/* Route Details */}
-        <div className='flex justify-between items-center w-fit gap-3'>
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-3">
           <h3 className="text-md font-semibold text-gray-700 dark:text-gray-300">
-            Details
+            Details:
           </h3>
           <p className="text-gray-700 dark:text-gray-300">
             {selectedRoute.details || 'No additional details available.'}
           </p>
         </div>
-        <div className="date flex justify-between items-center w-fit gap-3">
-  <h3 className="text-md font-semibold text-gray-700 dark:text-gray-300">Date:</h3>
-  <p className="text-md text-gray-600 dark:text-gray-400">
-    {new Date(selectedRoute.createdAt).toLocaleDateString('en-US', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    })}
-  </p>
-</div>
 
+        {/* Date */}
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-3">
+          <h3 className="text-md font-semibold text-gray-700 dark:text-gray-300">Date:</h3>
+          <p className="text-md text-gray-600 dark:text-gray-400">
+            {new Date(selectedRoute.createdAt).toLocaleDateString('en-US', {
+              weekday: 'long',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </p>
+        </div>
       </div>
     </div>
   </div>
 )}
+
 
     </div>
   );
