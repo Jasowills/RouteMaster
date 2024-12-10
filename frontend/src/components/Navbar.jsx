@@ -53,22 +53,22 @@ const Navbar = ({ toggleDarkMode, darkMode, toggleSidebar }) => {
         </button>
 
         {dropdownOpen && (
-          <div className="absolute top-16 flex flex-col justify-center  right-6 bg-white dark:bg-gray-950 text-black dark:text-white shadow-lg rounded-lg w-48 p-4 space-y-3">
+          <div className="absolute top-16 flex flex-col justify-center  right-6 bg-white dark:bg-gray-950 text-black dark:text-white shadow-lg rounded-lg w-48 p-6 space-y-3">
             <a
               href="#dashboard"
-              className="text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="text-md font-medium text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
             >
             Dashboard
             </a>
             <a
               href="#settings"
-              className="text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="text-md font-medium text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
             >
             Account Settings
             </a>
             <a
               href="#reports"
-              className="text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="text-md font-medium text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
             >
              Route Reports
             </a>
